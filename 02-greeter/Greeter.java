@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-\\Comment
+//Comment
 
 public class Greeter{
     public void greet(){
