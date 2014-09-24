@@ -12,11 +12,6 @@ public class stringStuff {
 	}
 	return diff;
     }
-    public void test(){
-       	System.out.println(diff21(14));
-	System.out.println(makeAbba("OMG", "HI"));
-	System.out.println(nonStart("Hello", "there"));
-    }
 }
 
 
