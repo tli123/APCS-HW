@@ -1,4 +1,4 @@
-public class boxfunc {
+public class shapes {
     public String box(int a, int b){
 	int cc = 0;
 	String boxy = "";
