@@ -52,7 +52,7 @@ public class shapes {
 	String res = "";
 	while (counter <= h) {
 	    int length = ((h + (h - 1)) - (counter + (counter -1)));
-	    int mid = (length / 2);
+	    int mid = ((length - 1) / 2);
 	    int count = 0;
 	    while (count < mid) {
 		res = res + " ";

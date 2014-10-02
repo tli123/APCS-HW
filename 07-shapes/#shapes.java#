@@ -73,5 +73,12 @@ public class shapes {
 	}
 	return res;
     }
+    public String Diamond(int h) {
+	if ((h%2) == 0) {
+	    return "Invalid input";
+	}
+	int mid = ((h - 1) / 2);
+	String res 
+	for (i = 0; i < mid; i++) {
 	    
 }
