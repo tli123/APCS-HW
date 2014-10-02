@@ -37,8 +37,8 @@ public class shapes {
 		res = res + " ";
 		c = c + 1;
 	    }
-	    int d = 1;
-	    while (d <= counter) {
+	    int d = 0;
+	    while (d < counter) {
 		res = res + "*";
 		d = d + 1;
 	    }
@@ -73,18 +73,56 @@ public class shapes {
 	}
 	return res;
     }
-    /*    public String diamond(int h) {
+    public String diamond(int h) {
 	if ((h%2) == 0) {
 	    return "Invalid input";
 	}
 	int mid = (((h-1)/2) + 1);
         String res = Tri3(mid);
-	int counter = mid;
-	int length = ((2 * mid) - 1)
-	while (counter <= h){
+	int len = h;
+	int med = mid;
+	while (len > mid) {
+	    med = med - 1;
+	    int spaces = (((2*mid)-1) - ((2*med)-1));
+	    spaces = (spaces / 2);
+	    int spacecount = 0;
+	    while (spacecount < spaces) {
+		res = res + " ";
+		spacecount = spacecount + 1;
+	    }
+	    int starcount = 0;
+	    while (starcount < ((2 * med) -1)) {
+		res = res + "*";
+		starcount = starcount + 1;
+	    }
 	    int scount = 0;
-	    int space = 
-	    while (count < length
-	
+	    while (scount < spaces) {
+		res = res + " ";
+		scount = scount + 1;
+	    }
+	    res = res + "\n";
+	    len = len - 1;
+	}
+	return res;
+    }
+    public String Tri4(int h) {
+	int counter = h;
+	String res = "";
+	while (counter >  0){
+	    int c = 0;
+	    int diff = (h - counter);
+	    while (c < diff){
+		res = res + " ";
+		c = c + 1;
+	    }
+	    int d = 0;
+	    while (d < counter) {
+		res = res + "*";
+		d = d + 1;
+	    }
+	    res = res + "\n";
+	    counter = counter - 1;
+	}
+	return res;
+    }
 }
-    */
