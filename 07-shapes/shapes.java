@@ -73,5 +73,18 @@ public class shapes {
 	}
 	return res;
     }
-	    
+    /*    public String diamond(int h) {
+	if ((h%2) == 0) {
+	    return "Invalid input";
+	}
+	int mid = (((h-1)/2) + 1);
+        String res = Tri3(mid);
+	int counter = mid;
+	int length = ((2 * mid) - 1)
+	while (counter <= h){
+	    int scount = 0;
+	    int space = 
+	    while (count < length
+	
 }
+    */
