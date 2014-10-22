@@ -1,5 +1,5 @@
 //working
-//worked with Tommy Li, Joseph Gelb, and Alice Xue
+//worked with Pooneet Thaper, Joseph Gelb, and Alice Xue
 import java.io.*;
 import java.util.*;
 import java.util.Scanner;
