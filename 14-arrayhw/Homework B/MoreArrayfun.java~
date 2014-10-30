@@ -1,9 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-/*Won't compile whenever I use an array as a parameter, the methods do work,
-  however */
-
 public class MoreArrayfun {
     
     private int[] nums;
