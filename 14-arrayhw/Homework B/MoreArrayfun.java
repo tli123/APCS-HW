@@ -1,9 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-/*Won't compile whenever I use an array as a parameter, the methods do work,
-  however */
-
 public class MoreArrayfun {
     
     private int[] nums;
@@ -167,6 +164,6 @@ public class MoreArrayfun {
 	System.out.println(s.tripleUp());
 	System.out.println(s.canBalance());
 	System.out.println(s.seriesUp(20));
-	System.out.println(s.maxMirror({9, 1, 2, 3, 4, 3, 2, 1}));
+	System.out.println(s.maxMirror(new int[]{9, 1, 2, 3, 4, 3, 2, 1}));
     }
 }
