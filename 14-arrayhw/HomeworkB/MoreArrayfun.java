@@ -7,7 +7,7 @@ public class MoreArrayfun {
     public MoreArrayfun() {
 	nums = new int[100];
 	for (int i = 0; i < 100; i++) {
-	    nums[i] = (int)((Math.random() * 10) + 1);
+	    nums[i] = (int)((Math.random() * 20) + 1);
 	}
     }
 
@@ -154,6 +154,25 @@ public class MoreArrayfun {
 	return maxnum;
     }
 
+    public int mode() {
+        int[] freqs = new int[20];
+	for (int i = 1; i <= 20; i++) {
+	    int counter = frequency(i);
+	    freqs[i-1] = counter;
+	}
+	int maxnum = 0;
+	for (int i = 0; i < freqs.length; i++) {
+	    maxnum = Math.max(maxnum, freqs[i]);
+	}
+	for (int i = 0; i < freqs.length; i++) {
+	    if (maxnum == freqs[i]) {
+		return i+1;
+	    }
+	}
+	return -1;
+    }
+
+
     public static void main(String[] args) {
 	MoreArrayfun s = new MoreArrayfun();
 	System.out.println(s.toString());
@@ -165,5 +184,6 @@ public class MoreArrayfun {
 	System.out.println(s.canBalance());
 	System.out.println(s.seriesUp(20));
 	System.out.println(s.maxMirror(new int[]{9, 1, 2, 3, 4, 3, 2, 1}));
+	System.out.println(s.mode());
     }
 }
