@@ -5,7 +5,7 @@ public class MoreArrayfun {
     
     private int[] nums;
     public MoreArrayfun() {
-	nums = new int[100];
+	nums = new int[100000];
 	for (int i = 0; i < 100; i++) {
 	    nums[i] = (int)((Math.random() * 20) + 1);
 	}
@@ -161,15 +161,36 @@ public class MoreArrayfun {
 	    freqs[i-1] = counter;
 	}
 	int maxnum = 0;
+	int index = 0;
 	for (int i = 0; i < freqs.length; i++) {
-	    maxnum = Math.max(maxnum, freqs[i]);
-	}
-	for (int i = 0; i < freqs.length; i++) {
-	    if (maxnum == freqs[i]) {
-		return i+1;
+	    if (freqs[i] > maxnum) {
+		maxnum = Math.max(maxnum, freqs[i]);
+		index = i+1;
 	    }
 	}
-	return -1;
+	return index;
+    }
+
+    public int fastmode() {
+	int[] freq = new int[20];
+	for (int i = 0; i < freq.length; i++) {
+	    freq[i] = 0;
+	}
+	for (int i = 0; i < nums.length; i++) {
+	    freq[nums[i]-1] = freq[nums[i]-1] + 1;
+	}
+	int maxnum = 0;
+	int index = 0;
+	for (int i = 0; i < freq.length; i++) {
+	    if (freq[i] > maxnum) {
+		maxnum = Math.max(maxnum, freq[i]);
+		index = i+1;
+	    }
+	}
+	if (index > 0) {
+	    return index;
+	}
+	return 0;
     }
 
 
@@ -179,11 +200,12 @@ public class MoreArrayfun {
 	System.out.println(s.frequency(7));
 	System.out.println(s.sum67());
 	System.out.println(s.more14());
-	System.out.println(s.tenRun());
+	//	System.out.println(s.tenRun());
 	System.out.println(s.tripleUp());
 	System.out.println(s.canBalance());
 	System.out.println(s.seriesUp(20));
 	System.out.println(s.maxMirror(new int[]{9, 1, 2, 3, 4, 3, 2, 1}));
-	System.out.println(s.mode());
+	//	System.out.println(s.mode());
+	System.out.println(s.fastmode());
     }
 }
