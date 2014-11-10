@@ -40,7 +40,11 @@ public class Sarray {
     }
 
     public Object get(int index) {
-        return data[index];
+        try {
+	    return data[index];
+	} catch(Exception e) {
+	    System.out.println("Error - we got " + e);
+	}
     }
 
     public Object set(int index, Object i){
