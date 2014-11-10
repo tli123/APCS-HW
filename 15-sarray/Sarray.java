@@ -19,16 +19,20 @@ public class Sarray {
     }
     
     public void add(int index, Object i){
-	Object[] data1 = new Object[last + 1];
-	for (int j = 0; j < index; j++) {
-	    data1[j] = data[j];
+	try {
+	    Object[] data1 = new Object[last + 1];
+	    for (int j = 0; j < index; j++) {
+		data1[j] = data[j];
+	    }
+	    data1[index] = i;
+	    for (int j = index+1; j < last+1; j++) {
+		data1[j] = data[j-1];
+	    }
+	    last++;
+	    data = data1;
+	} catch(Exception e) {
+	    System.out.println("Error - we got " + e);
 	}
-	data1[index] = i;
-	for (int j = index+1; j < last+1; j++) {
-	    data1[j] = data[j-1];
-	}
-	last++;
-	data = data1;
     }
     
     public int size() {
@@ -40,25 +44,33 @@ public class Sarray {
     }
 
     public Object set(int index, Object i){
-        Object old = data[index];
-	data[index] = i;
-	return old;
+	try {
+	    Object old = data[index];
+	    data[index] = i;
+	    return old;
+	} catch(Exception e) {
+	    System.out.prinln("Error - we got " + e);
+	}
     }
 
     public Object remove(int index){
-        Object old = data[index];
-	Object[] data1 = new Object[last-1];
-	int j = 0;
-	for (int i = 0; i < last; i++) {
-	    if (i != index) {
-		data1[j] = data[i];
-		j++;
+	try {
+	    Object old = data[index];
+	    Object[] data1 = new Object[last-1];
+	    int j = 0;
+	    for (int i = 0; i < last; i++) {
+		if (i != index) {
+		    data1[j] = data[i];
+		    j++;
+		}
 	    }
+	    data = data1;
+	    last--;
+	    return old;	
+	} catch(Exception e) {
+	    System.out.println("Error - we got " + e);
 	}
-	data = data1;
-	last--;
-	return old;	
-	} 
+    }
 
     public String toString() {
 	String Arraystring = "{";
