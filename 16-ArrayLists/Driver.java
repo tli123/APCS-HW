@@ -9,7 +9,7 @@ public class Driver {
 	for (int i = 0; i < 20; i++) {
 	    a.add(r.nextInt(10));
 	}
-	System.print.ln(a);
+	System.out.println(a);
 	for (int i = 0; i < a.size() - 1; i++) {
 	    if (a.get(i) == a.get(i+1)) {
 		a.remove(i+1);
