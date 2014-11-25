@@ -200,22 +200,14 @@ public class WordSearch{
 	addWordDR(word, row, col);
     }
 
-    public void populate() {
-	//populates wordlist after words added
-    }
-
-    public void Wordlist() {
-	wordlist is added wit hhe words
-    }
-
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
 	System.out.println(w);
-	w.AddWord("david");
+	w.AddWord("David");
 	w.addWordH("hello",3,5);
 	w.addWordH("look",3,8);	
 	w.addWordB("Edward", 6, 4);
-	w.addWordV("andysucks", 7, 2);
+	w.addWordV("AndySucks", 7, 2);
 	w.addWordVB("omghai", 7, 3);
 	w.addWordDL("lolxd", 3, 15);
 	w.addWordDR("rofl", 1, 20);
