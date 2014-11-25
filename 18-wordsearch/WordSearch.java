@@ -208,7 +208,11 @@ public class WordSearch {
     }
 
     public void populate() {
-	char[] alpha = new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+	char[] alpha = new char[26];
+	String a = "abcdefghijklmnopqrstuvwxyz";
+	for (int i = 0; i < alpha.length; i++) {
+	    alpha[i] = a.charAt(i);
+	}
 	Random r = new Random();
 	for (int i = 0; i < board.length; i++){
 	    for (int j = 0; j < board[i].length; j++) {
