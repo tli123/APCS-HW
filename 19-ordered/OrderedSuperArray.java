@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class OrderedSuperArray extends SuperArray {
-    public Object[] data;
+    public String[] data;
     public int last;
 
     public OrderedSuperArray() {
 	super();
     }
 
-    public void adding(Object obj) {
+    public void adding(String s) {
 	boolean x = add(obj);
 	Arrays.sort(data);
     }
