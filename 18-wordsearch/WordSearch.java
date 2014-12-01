@@ -243,6 +243,7 @@ public class WordSearch {
 	w.LDiagonal("desktop", 20, 20, 'f');
 	w.LBDiagonal("orange", 20, 13);
 	w.addWord("apple");
+	w.addWord("selfish");
 	System.out.println("After adding words:\n" + w);
 	w.populate();
 	System.out.println("Completed puzzle:\n" + w);
