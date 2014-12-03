@@ -7,16 +7,18 @@ public class OrderedSuperArray extends SuperArray {
     public OrderedSuperArray() {
 	super();
     }
-
+    
     public void adding(String s) {
-	boolean x = add(obj);
+	add(s);
 	Arrays.sort(data);
     }
 
     public static void main(String[] args) {
 	OrderedSuperArray s = new OrderedSuperArray();
-	s.adding("computers");
-	s.adding("Zamasky");
 	s.adding("hello");
+	s.adding("look");
+	s.adding("apple");
+	s.toString();
     }
+
 }
