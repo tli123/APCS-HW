@@ -79,16 +79,6 @@ public class SuperArray {
 	return "Could not return string at specified index";
     }
 
-    public void sort() {
-	for (int j = 0; j < last; j++) {
-	    String[] a = new String[j];
-	    for (int k = 0; k <= j; k++) :
-		a[k] = data[k];
-	for (int i = last - 1; i > 0 && n < data[i-1]; i--) {
-
-	}
-    }
-
     public String toString() {
 	String Arraystring = "{";
 	for (int i = 0; i < data.length - 1; i++) {
