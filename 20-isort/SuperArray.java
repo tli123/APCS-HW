@@ -89,6 +89,36 @@ public class SuperArray {
             data[i+1] = newval;
         }
     }
+    
+    public void ssort() {
+	for (int i = 0; i < size(); i++) {
+	    String minstring = data[i];
+	    String temp = "";
+	    int oldpos = 0;
+	    for (int j = i; j < size(); j++) {
+		if (data[j].compareTo(minstring) <= 0) {
+		    minstring = data[j];
+		    oldpos = j;
+		}
+	    }
+	    temp = data[i];
+	    data[i] = minstring;
+	    data[oldpos] = temp;
+	}
+    }
+
+    public void bsort() {
+	for (int i = 0; i < size() - 1; i++) {
+	    for (int j = i; j < size() - 1; j++) {
+		if (data[j+1].compareTo(data[j]) > 0) {
+		    String temp = data[j];
+		    data[j+1] = data[j];
+		    data[j] = temp;
+		}
+	    }
+	}
+    }
+	    
 
     public String toString() {
 	String Arraystring = "{";
@@ -104,13 +134,15 @@ public class SuperArray {
 	s.add("there");
 	s.add("this");
 	s.add("is");
-	s.add("an");
+	s.add("a");
 	s.add("superarray");
 	System.out.println(s.toString());
 	s.remove(2);
 	s.add(1, "look");
 	System.out.println(s.toString());
-	s.isort();
+	//	s.isort();
+	//	s.ssort();
+	s.bsort();
 	System.out.println(s.toString());
     }
 }
