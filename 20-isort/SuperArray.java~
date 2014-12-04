@@ -109,25 +109,15 @@ public class SuperArray {
 
     public void bsort() {
 	for (int i = 0; i < size() - 1; i++) {
-	    for (int j = 0; j < size() - 1; j++) {
-		if (data[j+1].compareTo(data[j]) < 0) {
-		    String temp = data[j+1];
+	    for (int j = i; j < size() - 1; j++) {
+		if (data[j+1].compareTo(data[j]) > 0) {
+		    String temp = data[j];
 		    data[j+1] = data[j];
 		    data[j] = temp;
 		}
 	    }
 	}
     }
-
-    /*
-
-      Questions on sorting:
-      1. What is the run time of the selection sort?
-      2. What is the run time of the insertion sort?
-      3. On what basis can you compare the two sorts?
-         Is one better than another?
-
-     */
 	    
 
     public String toString() {
