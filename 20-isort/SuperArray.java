@@ -117,18 +117,7 @@ public class SuperArray {
 		}
 	    }
 	}
-    }
-
-    /*
-
-      Questions on sorting:
-      1. What is the run time of the selection sort? .01 s
-      2. What is the run time of the insertion sort? .012 s
-      3. On what basis can you compare the two sorts?
-         Is one better than another?
-
-     */
-	    
+    }   
 
     public String toString() {
 	String Arraystring = "{";
@@ -149,10 +138,10 @@ public class SuperArray {
 	System.out.println(s.toString());
 	s.remove(2);
 	s.add(1, "look");
-	System.out.println(s.toString());
-	//s.isort();
-	s.ssort();
-	//s.bsort();
+       	System.out.println(s.toString());
+	s.isort(); //0/010s
+	s.ssort(); //0.010s
+	s.bsort(); // 0.011s
 	System.out.println(s.toString());
     }
 }
