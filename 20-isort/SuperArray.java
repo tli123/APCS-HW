@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class SuperArray {
     private String[] data;
     private int last;
@@ -117,7 +119,22 @@ public class SuperArray {
 		}
 	    }
 	}
-    }   
+    }
+
+    public void builtin() {
+	Arrays.sort(data);
+    }
+
+    /*
+
+      Questions on sorting:
+      1. What is the run time of the selection sort? .01 s
+      2. What is the run time of the insertion sort? .012 s
+      3. On what basis can you compare the two sorts?
+         Is one better than another?
+
+     */
+	    
 
     public String toString() {
 	String Arraystring = "{";
@@ -129,6 +146,9 @@ public class SuperArray {
 
     public static void main(String[] args) {
 	SuperArray s = new SuperArray();
+	/*
+	String[] data = new String[]{"hello", "there", "this", "is", "super", "unlike", "you", "suck", "whatever", "arrays", "blegh", "zebras", "derp", "dirt"};
+	*/
 	s.add("hello");
 	s.add("there");
 	s.add("this");
@@ -139,7 +159,8 @@ public class SuperArray {
 	s.remove(2);
 	s.add(1, "look");
        	System.out.println(s.toString());
-	s.isort(); //0/010s
+	s.builtin(); //0.011s
+	s.isort(); //0.011s
 	s.ssort(); //0.010s
 	s.bsort(); // 0.011s
 	System.out.println(s.toString());
