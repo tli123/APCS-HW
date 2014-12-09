@@ -21,24 +21,6 @@ public class Interval {
         return "[" + low + ", " + high + "]";
     }
 
-    public int compareTo(Interval other) {
-	if (other.low == this.low) {
-	    if (other.high == this.high) {
-		retun 0;
-	    }
-	    if (this.high > other.high) {
-		return 1;
-	    }
-	    if (this.high < other.high) {
-		return -1;
-	    }
-	}
-	if (this.low > other.low) {
-	    return 1;
-	}
-	    
-    }
-
     public static void main(String[] args) {
 	Interval[] s = new Interval[5];
 	for (int a = 0; a < 5; a++) {
