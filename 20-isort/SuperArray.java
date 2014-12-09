@@ -146,23 +146,23 @@ public class SuperArray {
 
     public static void main(String[] args) {
 	SuperArray s = new SuperArray();
-	/*
-	String[] data = new String[]{"hello", "there", "this", "is", "super", "unlike", "you", "suck", "whatever", "arrays", "blegh", "zebras", "derp", "dirt"};
-	*/
 	s.add("hello");
 	s.add("there");
 	s.add("this");
 	s.add("is");
 	s.add("a");
 	s.add("superarray");
-	System.out.println(s.toString());
-	s.remove(2);
-	s.add(1, "look");
-       	System.out.println(s.toString());
-	s.builtin(); //0.011s
-	s.isort(); //0.011s
-	s.ssort(); //0.010s
-	s.bsort(); // 0.011s
-	System.out.println(s.toString());
+	for (int i = 0; i < 10000; i++){
+	    s.add("b" + i);
+	}
+	//System.out.println(s.toString());
+	//s.remove(2);
+	//s.add(1, "look");
+       	//System.out.println(s.toString());
+	s.builtin(); //0.232s
+	//s.isort(); //0.0218s
+	//s.ssort(); //0.430s
+	//s.bsort(); // 0.861s
+	//System.out.println(s.toString());
     }
 }
