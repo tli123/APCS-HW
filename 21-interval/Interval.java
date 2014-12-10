@@ -24,7 +24,7 @@ public class Interval {
     public int compareTo(Interval other) {
 	if (other.low == this.low) {
 	    if (other.high == this.high) {
-		retun 0;
+		return 0;
 	    }
 	    if (this.high > other.high) {
 		return 1;
@@ -36,7 +36,9 @@ public class Interval {
 	if (this.low > other.low) {
 	    return 1;
 	}
-	    
+	if (this.low < other.low) {
+	    return -1;
+	}
     }
 
     public static void main(String[] args) {
