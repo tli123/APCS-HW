@@ -11,7 +11,7 @@ public class Monster extends Basechar implements Comparable{
 
     public int compareTo(Object other) {
 	Monster o = (Monster)other;
-	return this.getName().compareTo(o.getName());
+	return (int)this.getName().charAt(0) - (int)o.getName().charAt(0);  
     }					      
 
     public static void main(String[] args) {
