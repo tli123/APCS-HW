@@ -1,0 +1,8 @@
+https://github.com/hfilosa/Final-Project
+
+The updated versions of each file makes it easy for the reader to decipher what was changed in each file. The project is condensed into three files, making it both difficult and easy to locate what the reader is looking for. In terms of reading the code, the names of the method, as well as the print messages show what the coders intend to do. However, at times, I feel that commenting should be used a bit further, such as the piece.java file. Although the file's contents are somewhat clear after parsing through the rest of the files, a bit of commenting can clear it up, such as the functions of the varables in lines 2-13.
+
+Maybe this wasn't finished yet, but I currently see no way a player can win the game. There doesn't seem to be a method in which the game checks for checkmate, therefore the method that calls for check would just keep returning true.
+
+Otherwise, there aren't any glaring flaws. Coders have done an exceptionally good job at making sure everything that could break the chess game was covered. In addition, the game is also newbie friendly, and can potentially help users learn how to play.
+
